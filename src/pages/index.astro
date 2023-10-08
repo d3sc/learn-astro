@@ -1,0 +1,32 @@
+---
+// Area ini digunakan untuk server side rendering seperti next js
+
+// Ketika memanggil console.log() tidak akan tampil ke dalam browser, tetapi akan tampil kedalam terminal. karena astro js itu Zero JS yang dimana tidak menggunakan javascript pada browser, kecuali pada saat di bundle project nya.
+// console.log("test");
+
+import Link from "../components/Link.astro";
+import Layout from "../layouts/layouts.astro";
+
+const title = "Home Page";
+---
+
+<!-- sama seperti laravel template engine nya, saya suka.. --><!-- Memanggil layout yang ada pada file layouts.astro agar bisa menggunakan slot --><!-- Bisa melempar parameter dengan menggunakan cara seperti dibawah ini, sama seperti react js -->
+<Layout title={title}>
+  <!-- Memanggil variable sama seperti react -->
+  <Link link="/about" cssClass="link" content="about" />
+  <div class="test">hover saya</div>
+</Layout>
+
+<!-- direkomendasikan jika ingin menggunakan styling css, seperti ini -->
+<style lang="scss">
+  .test {
+    margin-top: 50px;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+
+    &:hover {
+      background-color: blue;
+    }
+  }
+</style>

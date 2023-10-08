@@ -1,0 +1,16 @@
+---
+import Link from "../components/Link.astro";
+import Layouts from "../layouts/layouts.astro";
+
+const title = "About page";
+---
+
+<Layouts title={title}>
+  <Link link="/" cssClass="link" content="Pergi ke home" />
+</Layouts>
+
+<!-- script jika ingin menggunakan client side rendering -->
+<script>
+  // ini akan di panggil ke dalam browser
+  console.log("halo");
+</script>

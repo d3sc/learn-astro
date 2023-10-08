@@ -1,0 +1,29 @@
+---
+    import "../styles/global.css"
+    const { title } = Astro.props
+---
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Ikbar</title>
+  </head>
+  <body>
+      <!-- Memanggil variable sama seperti react -->
+    <h1>{title}</h1>
+
+    <!-- Cara pertama menggunakan slot -->
+    <slot>
+        <!-- Jika kita mengisi sesuatu disini, dia akan dipanggil menjadi default value. ketika tidak ada isi didalama slot nya, maka dia akan menampilkan default value. -->
+        <!-- Jika value itu berupa comment seperti ini, dia akan tetap terbaca oleh slot nya -->
+      <!-- Ini adalah isi konten dari luar  -->
+      default value will add here
+    </slot>
+
+    <!-- cara kedua menggunakan slot -->
+    <!-- <slot /> -->
+  </body>
+</html>
